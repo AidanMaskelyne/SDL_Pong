@@ -1,0 +1,7 @@
+target/
+.vs/
+*.sln
+*.vcxproj
+*.vsxproj.*
+Makefile
+*.make
