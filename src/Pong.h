@@ -7,10 +7,11 @@ public:
 	~Pong();
 
 	void run();
-	void handleEvent();
+	void processEvents();
+	void handleKeyboardEvent(SDL_KeyboardEvent e);
 	void update();
 	void draw();
-	void quit(int exitCode);
+	void sendQuitEvent();
 
 	bool windowShouldClose = false;
 
@@ -18,6 +19,7 @@ private:
 	SDL_Window* window;
 	SDL_Renderer* renderer;
 	SDL_Event event;
-
 	Player player1, player2;
+
+	Uint32 lastUpdate;
 };
